@@ -1,0 +1,60 @@
+batch_size: 1
+beta: 0.999
+data: ./../../dataset/kitti_256/
+decay_rate: 0.7
+decay_step: 200000
+
+depth_name: DispResNet
+epochs: 200
+evaluate: False
+flownet_name: HALFlow
+flag_big_radius: 1
+
+kitti_rm_height: 540
+kitti_rm_width: 960
+
+kitti_height: 375
+kitti_width: 1242
+
+index_num: 8192
+is_training: True
+
+kernel_shape: 1
+layers: 1
+
+load_weights_folder: ./pretrained_weight/sc_depth/
+
+loss_weight_dc: 0.1
+loss_weight_ods: 0.1
+chamfer_loss_weight: 1
+curvature_loss_weight: 0.3
+photometric_loss_weight: 0.1
+lr: 0.001
+momentum: 0.9
+multi_gpu: False
+
+name: sceneflow_color_sf_8_resume
+num_points: 2048
+pose_name: PoseResNet
+pretrained_disp: ./pretrained_weight/SC_depth/dispnet_model_best.pth.tar
+pretrained_posenet: ./pretrained_weight/SC_depth/exp_pose_model_best.pth.tar
+
+resnet_layers: 50
+resume: True
+resume_name: ./../checkpoints_final/sceneflow_color_sf_8/model.best.t7
+save_path: ./../checkpoints_final/
+seed: 0
+sequence_length: 3
+test_batch_size: 1
+test_data_path: ./../../dataset/kitti_rm_ground
+test_lidar_kitti_path: ./../../dataset/lidar_kitti
+test_argoverse_path: ./../../dataset/argoverse_sf
+test_nuscenes_path: ./../../dataset/nuscenes
+test_period: 1
+weight_decay: 0
+workers: 4
+
+#./../checkpoints1/sceneflow_no_DSC/model.best.t7
+#txy/PointConv_665_0.0391.pth
+
+#./../checkpoints_final/sceneflow_color/scene_model.newest.t7

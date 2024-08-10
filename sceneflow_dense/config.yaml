@@ -1,0 +1,66 @@
+##################### TRAIN + EVALUATE ###################
+
+batch_size: 1
+beta: 0.999
+data: ./../../dataset/kitti_256/  # b 3 h w    # test b 3 n 
+decay_rate: 0.7
+decay_step: 200000
+
+resnet_layers: 50
+resume: False
+load_model_path: ./../checkpoints1/train_03_02_2023
+save_path: ./../checkpoints1/
+
+depth_name: DispResNet
+epochs: 200
+evaluate: False
+flownet_name: ESBFlow
+flag_big_radius: 1
+
+kitti_height: 295
+kitti_width: 1242
+
+kitti_rm_height: 540
+kitti_rm_width: 960
+
+index_num: 518400
+is_training: True
+
+kernel_shape: 1
+layers: 1
+
+load_weights_folder: ./pretrained_weight/sc_depth/
+
+height: 256
+width: 832
+
+loss_weight_dc: 0.1
+loss_weight_ods: 0.1
+chamfer_loss_weight: 1
+curvature_loss_weight: 0.4
+photometric_loss_weight: 0.2
+lr: 0.001
+momentum: 0.9
+multi_gpu: False
+
+
+num_points: 2048
+pose_name: PoseResNet
+pretrained_disp: ./pretrained_weight/SC_depth/dispnet_model_best.pth.tar
+pretrained_posenet: ./pretrained_weight/SC_depth/exp_pose_model_best.pth.tar
+
+
+############## EVALUATE ##################
+
+test_save_path: ./../checkpoints1/
+resume_eval: True
+load_eval_model_path: ./../checkpoints1/train_all_no_LossMask03_26_2023
+seed: 0
+sequence_length: 3
+
+test_batch_size: 1
+test_data_path: ./../../dataset/kitti_sceneflow/
+test_period: 1
+weight_decay: 0
+workers: 4
+

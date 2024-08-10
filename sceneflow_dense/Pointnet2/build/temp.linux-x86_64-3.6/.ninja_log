@@ -1,0 +1,10 @@
+# ninja log v5
+1	4338	1657535737822237553	/data/sceneflow_pytorch/Pointnet2/build/temp.linux-x86_64-3.6/src/group_points.o	47783e81cae5349e
+1	4473	1657535737958236640	/data/sceneflow_pytorch/Pointnet2/build/temp.linux-x86_64-3.6/src/interpolate.o	e890d9c6789e5fd0
+1	4476	1657535737962236614	/data/sceneflow_pytorch/Pointnet2/build/temp.linux-x86_64-3.6/src/sampling.o	a8f9a4bde6c5d6ff
+0	4797	1657535738282234464	/data/sceneflow_pytorch/Pointnet2/build/temp.linux-x86_64-3.6/src/ball_query.o	511e13174379e319
+1	11337	1657535744822190496	/data/sceneflow_pytorch/Pointnet2/build/temp.linux-x86_64-3.6/src/group_points_gpu.o	f7c3490aa3778cb2
+0	11383	1657535744866190200	/data/sceneflow_pytorch/Pointnet2/build/temp.linux-x86_64-3.6/src/ball_query_gpu.o	60dc9ccae27bb53f
+1	11506	1657535744986189392	/data/sceneflow_pytorch/Pointnet2/build/temp.linux-x86_64-3.6/src/interpolate_gpu.o	cb5db40813fc87ae
+1	11796	1657535745282187399	/data/sceneflow_pytorch/Pointnet2/build/temp.linux-x86_64-3.6/src/sampling_gpu.o	9be07311e1e947bc
+0	15230	1657535748706164338	/data/sceneflow_pytorch/Pointnet2/build/temp.linux-x86_64-3.6/src/pointnet2_api.o	a2e221ab809b93e3

@@ -1,0 +1,5 @@
+# ninja log v5
+0	679	1678946129413288723	/data/sceneflow_new/ops_pytorch/gpu_threenn_sample/build/temp.linux-x86_64-3.6/no_sort_knn_go.o	8d2babfa2c893376
+0	13652	1678946142381210328	/data/sceneflow_new/ops_pytorch/gpu_threenn_sample/build/temp.linux-x86_64-3.6/no_sort_knn_g.o	29c01bd7296da528
+0	798	1679415368553637694	/data/sceneflow_new/ops_pytorch/gpu_threenn_sample/build/temp.linux-x86_64-3.6/no_sort_knn_go.o	8d2babfa2c893376
+0	15017	1679415382766158937	/data/sceneflow_new/ops_pytorch/gpu_threenn_sample/build/temp.linux-x86_64-3.6/no_sort_knn_g.o	29c01bd7296da528

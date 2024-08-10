@@ -1,0 +1,7 @@
+# ninja log v5
+0	14265	1678355360787670600	/data/sceneflow_new/ops_pytorch/fused_conv_select/build/temp.linux-x86_64-3.6/fused_conv_g.o	daadd0a46c84718b
+1	24063	1678355370583564391	/data/sceneflow_new/ops_pytorch/fused_conv_select/build/temp.linux-x86_64-3.6/fused_conv_go.o	818108393f5b5274
+8	14320	1678946103297444800	/data/sceneflow_new/ops_pytorch/fused_conv_select/build/temp.linux-x86_64-3.6/fused_conv_g.o	daadd0a46c84718b
+9	24127	1678946113101386496	/data/sceneflow_new/ops_pytorch/fused_conv_select/build/temp.linux-x86_64-3.6/fused_conv_go.o	818108393f5b5274
+0	16275	1679414691226684764	/data/sceneflow_new/ops_pytorch/fused_conv_select/build/temp.linux-x86_64-3.6/fused_conv_g.o	daadd0a46c84718b
+1	27100	1679414702051035591	/data/sceneflow_new/ops_pytorch/fused_conv_select/build/temp.linux-x86_64-3.6/fused_conv_go.o	818108393f5b5274

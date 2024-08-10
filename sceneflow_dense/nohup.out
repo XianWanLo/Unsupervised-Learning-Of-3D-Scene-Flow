@@ -1,0 +1,70 @@
+cp: cannot stat 'train.py': No such file or directory
+ time =  2.384185791015625e-07
+run train.py, start here: ---------
+{'batch_size': 4, 'beta': 0.999, 'data': './../../dataset/kitti_256/', 'decay_rate': 0.7, 'decay_step': 200000, 'resnet_layers': 50, 'resume': True, 'load_model_path': './../checkpoints1/train_03_02_2023', 'save_path': './../checkpoints1/', 'depth_name': 'DispResNet', 'epochs': 200, 'evaluate': False, 'flownet_name': 'ESBFlow', 'flag_big_radius': 1, 'kitti_height': 295, 'kitti_width': 1242, 'kitti_rm_height': 540, 'kitti_rm_width': 960, 'index_num': 518400, 'is_training': True, 'kernel_shape': 1, 'layers': 1, 'load_weights_folder': './pretrained_weight/sc_depth/', 'height': 256, 'width': 832, 'loss_weight_dc': 5, 'loss_weight_ods': 1, 'chamfer_loss_weight': 10, 'curvature_loss_weight': 15, 'photometric_loss_weight': 1, 'lr': 0.001, 'momentum': 0.9, 'multi_gpu': False, 'num_points': 2048, 'pose_name': 'PoseResNet', 'pretrained_disp': './pretrained_weight/SC_depth/dispnet_model_best.pth.tar', 'pretrained_posenet': './pretrained_weight/SC_depth/exp_pose_model_best.pth.tar', 'test_save_path': './../checkpoints1/', 'resume_eval': False, 'load_eval_model_path': './../checkpoints1/train_02_27_2023', 'seed': 0, 'sequence_length': 3, 'test_batch_size': 4, 'test_data_path': './../../dataset/kitti_sceneflow/', 'test_period': 1, 'weight_decay': 0, 'workers': 4}
+=> will save everything to ./../checkpoints1//train_03_02_2023
+train data len set:  42440
+42440 samples found in train data
+train data len set used : 10000
+len set:  160
+160 samples found in test data
+=> using pre-trained weights for DispResNet
+=> resuming from checkpoint ./../checkpoints1/train_03_02_2023/scene_model.newest.t7 
+load resume model successfully! ----------------
+do the training + evaluate part:
+train data len set used : 10000
+current epoch:  0
+Traceback (most recent call last):
+  File "train_txy.py", line 747, in <module>
+    main()
+  File "train_txy.py", line 376, in main
+    train_loss = train(train_loader, disp_net, pose_net, scene_net, optimizer, training_writer)
+  File "train_txy.py", line 434, in train
+    depth, ref_depths = compute_depth(disp_net, tgt_img, ref_imgs)
+  File "train_txy.py", line 170, in compute_depth
+    tgt_depth = [1 / disp for disp in disp_net(tgt_img)]
+  File "/usr/local/lib/python3.6/dist-packages/torch/nn/modules/module.py", line 727, in _call_impl
+    result = self.forward(*input, **kwargs)
+  File "/data/sceneflow_new/model/SCDepth.py", line 115, in forward
+    features = self.encoder(x)
+  File "/usr/local/lib/python3.6/dist-packages/torch/nn/modules/module.py", line 727, in _call_impl
+    result = self.forward(*input, **kwargs)
+  File "/data/sceneflow_new/model/resnet_encoder.py", line 96, in forward
+    self.features.append(self.encoder.layer4(self.features[-1]))
+  File "/usr/local/lib/python3.6/dist-packages/torch/nn/modules/module.py", line 727, in _call_impl
+    result = self.forward(*input, **kwargs)
+  File "/usr/local/lib/python3.6/dist-packages/torch/nn/modules/container.py", line 117, in forward
+    input = module(input)
+  File "/usr/local/lib/python3.6/dist-packages/torch/nn/modules/module.py", line 727, in _call_impl
+    result = self.forward(*input, **kwargs)
+  File "/usr/local/lib/python3.6/dist-packages/torchvision/models/resnet.py", line 124, in forward
+    out = self.conv1(x)
+  File "/usr/local/lib/python3.6/dist-packages/torch/nn/modules/module.py", line 727, in _call_impl
+    result = self.forward(*input, **kwargs)
+  File "/usr/local/lib/python3.6/dist-packages/torch/nn/modules/conv.py", line 423, in forward
+    return self._conv_forward(input, self.weight)
+  File "/usr/local/lib/python3.6/dist-packages/torch/nn/modules/conv.py", line 420, in _conv_forward
+    self.padding, self.dilation, self.groups)
+KeyboardInterrupt
+ time =  2.384185791015625e-07
+run train.py, start here: ---------
+{'batch_size': 1, 'beta': 0.999, 'data': './../../dataset/kitti_256/', 'decay_rate': 0.7, 'decay_step': 200000, 'resnet_layers': 50, 'resume': False, 'load_model_path': './../checkpoints1/train_03_02_2023', 'save_path': './../checkpoints1/', 'depth_name': 'DispResNet', 'epochs': 200, 'evaluate': False, 'flownet_name': 'ESBFlow', 'flag_big_radius': 1, 'kitti_height': 295, 'kitti_width': 1242, 'kitti_rm_height': 540, 'kitti_rm_width': 960, 'index_num': 518400, 'is_training': True, 'kernel_shape': 1, 'layers': 1, 'load_weights_folder': './pretrained_weight/sc_depth/', 'height': 256, 'width': 832, 'loss_weight_dc': 0.2, 'loss_weight_ods': 0.2, 'chamfer_loss_weight': 0.8, 'curvature_loss_weight': 0.4, 'photometric_loss_weight': 0.2, 'lr': 0.001, 'momentum': 0.9, 'multi_gpu': False, 'num_points': 2048, 'pose_name': 'PoseResNet', 'pretrained_disp': './pretrained_weight/SC_depth/dispnet_model_best.pth.tar', 'pretrained_posenet': './pretrained_weight/SC_depth/exp_pose_model_best.pth.tar', 'test_save_path': './../checkpoints1/', 'resume_eval': False, 'load_eval_model_path': './../checkpoints1/train_03_17_2023', 'seed': 0, 'sequence_length': 3, 'test_batch_size': 1, 'test_data_path': './../../dataset/kitti_sceneflow/', 'test_period': 1, 'weight_decay': 0, 'workers': 1}
+=> will save everything to ./../checkpoints1//test_image_03_25_2023
+Traceback (most recent call last):
+  File "train_all.py", line 787, in <module>
+    main()
+  File "train_all.py", line 261, in main
+    sequence_length=args.sequence_length
+  File "/data/sceneflow_new/dataset/sequence_folders.py", line 70, in __init__
+    self.samples = crawl_folders(self.scenes, sequence_length)
+  File "/data/sceneflow_new/dataset/sequence_folders.py", line 35, in crawl_folders
+    gts = sorted(folder.files('*.npy'))
+  File "/usr/local/lib/python3.6/dist-packages/path/__init__.py", line 496, in files
+    return [p for p in self.listdir(*args, **kwargs) if p.isfile()]
+  File "/usr/local/lib/python3.6/dist-packages/path/__init__.py", line 496, in <listcomp>
+    return [p for p in self.listdir(*args, **kwargs) if p.isfile()]
+  File "/usr/local/lib/python3.6/dist-packages/path/__init__.py", line 874, in isfile
+    return self.module.isfile(self)
+  File "/usr/lib/python3.6/genericpath.py", line 30, in isfile
+    st = os.stat(path)
+KeyboardInterrupt
